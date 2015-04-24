@@ -132,14 +132,14 @@ public class EmployeeForm extends JFrame {
 	}
 	
 	protected void do_btnNoArg_actionPerformed(ActionEvent arg0) {
-		Employee arg = new Employee(); 
+		Employee arg = new Employee("", 0, "", ""); 
 		employeeListModel.addElement(arg);
 	}
 	
 	protected void do_btn2Arg_actionPerformed(ActionEvent e) {
 		int empID = Integer.parseInt(empIDTextField.getText());
 		// Call appropriate constructor
-		Employee arg = new Employee(); 
+		Employee arg = new Employee(empNameTextField.getText(), empID, "", ""); 
 		employeeListModel.addElement(arg);
 	}
 	
@@ -147,7 +147,7 @@ public class EmployeeForm extends JFrame {
 		int empID = Integer.parseInt(empIDTextField.getText());
 		String dept = (String) departmentComboBox.getSelectedItem();
 		// Call appropriate constructor
-		Employee arg = new Employee(); 
+		Employee arg = new Employee(empNameTextField.getText(), empID, departmentComboBox.getSelectedItem(), positionTextField.getText()); 
 		employeeListModel.addElement(arg);
 	}
 }

@@ -5,12 +5,7 @@ public class Employee {
 	private String department;
 	private String position;
 	
-	public void Arg(String name, int idNumber, String department,
-			String position) {
-		this.name = "";
-		this.idNumber = 0;
-		this.department = "";
-		this.position = "";
+	public Employee(String name, int idNumber, Object department, String position) {
 	}
 	
 	public String getName() {
